@@ -14,7 +14,7 @@ fi
 sleep 15
 
 # Check that the health endpoint is returning 200
-curl -s -o /dev/null -w "%{http_code}" http://localhost:6400/api/v1/health | grep 200
+curl -s -o /dev/null -w "%{http_code}" http://opulent-space-parakeet-jqxg4695r762pvrv-6400.app.github.dev/api/v1/health | grep 200
 error=$?
 if [[ $error -ne 0 ]]; then
     echo "Failed to get 200 from health endpoint"
